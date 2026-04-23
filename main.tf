@@ -11,8 +11,8 @@ provider "aws" {
 region = "ap-south-2"
 }
 
-resource "aws_s3_bucket" "demo_bucket" {
-bucket = "alan0101"
+data "aws_s3_bucket" "demo_bucket" {
+  bucket = "alan0101"
 }
 
 resource "aws_vpc" "demo_vpc" {
@@ -26,5 +26,5 @@ cidr_block = "10.0.0.0/26"
 
 resource "aws_instance" "ec2" {
 ami = "ami-0f5ee92e2d63afc18"
-instance_type = "t2.micro"
+instance_type = "t3.small"
 }
