@@ -1,3 +1,8 @@
+version: 0.0
+os: linux
+files:
+source: /
+destination: /var/www/html
 version: 0.2
 phases:
   install:
