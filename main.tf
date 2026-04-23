@@ -21,7 +21,7 @@ cidr_block = "10.0.0.0/26"
 
 resource "aws_subnet" "public_subnet" {
 vpc_id = aws_vpc.demo_vpc.id
-cidr_block = "10.0.1.0/24"
+cidr_block = "10.0.1.0/26"
 }
 
 resource "aws_instance" "ec2" {
