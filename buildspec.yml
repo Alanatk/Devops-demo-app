@@ -1,16 +1,19 @@
-version: 0.0
-os: linux
-files:
-source: /
-destination: /var/www/html
 version: 0.2
+
 phases:
   install:
     commands:
-      - echo "Installing"
+      - echo "Installing..."
+
   build:
     commands:
       - echo "Build started"
+
+  post_build:
+    commands:
+      - echo "Build completed"
+
 artifacts:
   files:
+    - '**/*'
     - '**/*'
